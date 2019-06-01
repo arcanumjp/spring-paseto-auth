@@ -1,18 +1,14 @@
 # api-auth
 
-Spring APIの認証をJWT(JsonWebToken)で実装したサンプルです
+Spring APIの認証をPASETOで実装したサンプルです
 
 ※次のブログを書いた際にコミットしたリポジトリです。
-http://arcanum.hatenablog.com/entry/2019/05/25/144707
+ブログの内容に合わせていじっているのでこのままでは動きません。
+http://arcanum.hatenablog.com/entry/2019/06/01/113535
 
-※なお、このリポジトリは次のエントリで公開されているリポジトリのフォークです
+※なお、このリポジトリは次のエントリで公開されているリポジトリのフォークから派生したものです。
 https://qiita.com/nyasba/items/f9b1b6be5540743f8bac
 
-#### 起動
-
-```
-./gradlew clean bootRun
-```
 
 #### ログイン
 
