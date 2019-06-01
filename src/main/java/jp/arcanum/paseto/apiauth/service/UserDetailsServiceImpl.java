@@ -15,7 +15,7 @@ import java.util.List;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private static List<String> usernameList = Arrays.asList("nyasba", "admin");
-    private static String ENCRYPTED_PASSWORD = "$2a$10$5DF/j5hHnbeHyh85/0Bdzu1HV1KyJKZRt2GhpsfzQ8387A/9duSuq"; // "password"を暗号化した値
+    public static String ENCRYPTED_PASSWORD = "$2a$10$5DF/j5hHnbeHyh85/0Bdzu1HV1KyJKZRt2GhpsfzQ8387A/9duSuq"; // "password"を暗号化した値
 
 	private static final List<GrantedAuthority> AUTH_USER = AuthorityUtils.createAuthorityList("ROLE_USER");
 	private static final List<GrantedAuthority> AUTH_ADMIN = AuthorityUtils.createAuthorityList("ROLE_USER", "ROLE_ADMIN");

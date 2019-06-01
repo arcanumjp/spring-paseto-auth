@@ -11,8 +11,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import jp.arcanum.paseto.apiauth.support.JWTAuthenticationFilter;
-import jp.arcanum.paseto.apiauth.support.JWTAuthorizationFilter;
+import jp.arcanum.paseto.apiauth.support.PASETOAuthenticationFilter;
+import jp.arcanum.paseto.apiauth.support.PASETOAuthorizationFilter;
 
 import static jp.arcanum.paseto.apiauth.support.SecurityConstants.LOGIN_URL;
 import static jp.arcanum.paseto.apiauth.support.SecurityConstants.SIGNUP_URL;
@@ -35,8 +35,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and().logout()
                 .and().csrf().disable()
-                .addFilter(new JWTAuthenticationFilter(authenticationManager(), bCryptPasswordEncoder()))
-                .addFilter(new JWTAuthorizationFilter(authenticationManager()))
+                .addFilter(new PASETOAuthenticationFilter(authenticationManager(), bCryptPasswordEncoder()))
+                .addFilter(new PASETOAuthorizationFilter(authenticationManager()))
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         ;
     }

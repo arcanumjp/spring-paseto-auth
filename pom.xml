@@ -18,6 +18,14 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+<repositories>
+	<repository>
+		<id>lazysodium</id>
+		<url>https://dl.bintray.com/terl/lazysodium-maven</url>
+	</repository>
+</repositories>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,6 +41,7 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
+<!-- 
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>
 		    <artifactId>jjwt</artifactId>
@@ -42,7 +51,19 @@
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
         </dependency>
+ -->
+        <dependency>
+            <groupId>net.aholbrook.paseto</groupId>
+            <artifactId>meta</artifactId>
+            <version>0.3.0</version>
+        </dependency>
+		<dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        </dependency>
 
+        
+ 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
